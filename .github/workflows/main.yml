@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Retrieve the source code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - name: Install build dependencies
@@ -49,7 +49,7 @@ jobs:
         os: [ubuntu-latest,macos-latest,windows-latest]
     steps:
     - name: Retrieve the source code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - id: conda-root
       name: Set CONDA_ROOT
       run: |
@@ -98,7 +98,7 @@ jobs:
             squashfs_deps: ""
     steps:
     - name: Retrieve the source code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - id: conda-root
       name: Set CONDA_ROOT
       run: |
@@ -132,7 +132,7 @@ jobs:
     if: github.event_name == 'push'
     steps:
     - name: Retrieve the source code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - name: Download the build artifacts
