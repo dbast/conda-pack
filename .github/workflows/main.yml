@@ -112,7 +112,7 @@ jobs:
         path: ${{ steps.conda-root.outputs.value }}
         key: testbed-${{ matrix.os }}-${{ hashFiles('testing') }}-5
     - name: Download the build artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: package-${{ github.sha }}
         path: conda-bld
@@ -136,7 +136,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Download the build artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: package-${{ github.sha }}
         path: conda-bld
